@@ -3,8 +3,7 @@ name: t2000-withdraw
 description: >-
   Withdraw from savings and receive USDC. Use when asked to withdraw from
   savings, access deposited funds, pull money out of savings, or reduce
-  yield position. Non-USDC positions are auto-swapped back to USDC.
-  For sending to another address, use t2000-send.
+  yield position. For sending to another address, use t2000-send.
 license: MIT
 metadata:
   author: t2000
@@ -15,9 +14,7 @@ metadata:
 # t2000: Withdraw from Savings
 
 ## Purpose
-Withdraw from savings and receive USDC. If savings are held in a
-non-USDC stablecoin (due to rebalance), t2000 auto-swaps back to
-USDC before returning funds to the checking balance.
+Withdraw USDC from savings back to your checking balance.
 
 ## Command
 ```bash
@@ -29,12 +26,8 @@ t2000 withdraw 25
 t2000 withdraw all
 ```
 
-You always receive USDC regardless of which stablecoin your savings
-are held in internally.
-
 ## Fees
 - No protocol fee on withdrawals
-- Standard DEX fees apply if an auto-swap from non-USDC is needed
 
 ## Output
 ```
