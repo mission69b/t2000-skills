@@ -18,7 +18,7 @@ metadata:
 
 ## Purpose
 
-Expose a t2000 Agent Wallet to any MCP-compatible AI client over stdio. **9 core tools + N skill prompts** (one per `SKILL.md` in `t2000-skills/skills/`), plus **auto-registered `t2000_<category>` capability tools** (`t2000_ai`, `t2000_search`, `t2000_data`, …) derived from the live gateway catalog at server start — scoped aliases of `t2000_pay` (degrade to `t2000_pay` if the catalog is unreachable). No global install required — the recommended path uses `npx` so the AI client always pulls the latest published version.
+Expose a t2000 Agent Wallet to any MCP-compatible AI client over stdio. **9 tools + N skill prompts** (one per `SKILL.md` in `t2000-skills/skills/`). No global install required — the recommended path uses `npx` so the AI client always pulls the latest published version.
 
 ## ⚠️ The most common confusion
 
@@ -132,7 +132,7 @@ All support `dryRun: true` for previews without signing (where applicable).
 
 | Tool | Description |
 |------|-------------|
-| `t2000_limit` | View the user's opt-in spending caps from `~/.t2000/config.json`. READ-ONLY — the LLM cannot set or clear limits via MCP. |
+| `t2000_limit` | View the user's spending caps (on by default: $25/tx · $100/day) from `~/.t2000/config.json`. READ-ONLY — the LLM cannot set or clear limits via MCP. |
 
 > **v3 → v4 deletions.** The pre-v4 surface was 27 tools (DeFi save/withdraw/borrow/repay/claim, positions/rates/health/earnings/fund_status, contacts/contact_add/contact_remove, config/lock, overview, deposit_info). All deleted as part of `SPEC_AGENT_WALLET_GREENFIELD` — see the `t2000-setup` skill for the v4 product story. DeFi lives on audric.ai now; local contacts are deprecated in favor of SuiNS (`alice.sui`).
 
